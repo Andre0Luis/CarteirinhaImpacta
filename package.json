@@ -18,12 +18,28 @@
     "react-native-elements": "^3.4.3",
     "react-native-safe-area": "^0.5.1",
     "react-native-screens": "^4.4.0",
-    "react-native-swiper": "^1.6.0"
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-swiper": "^1.6.0",
+    "react-dom": "18.3.1",
+    "react-native-web": "~0.19.13",
+    "@expo/metro-runtime": "~4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
     "typescript": "^5.3.3"
   },
-  "private": true
+  "private": true,
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": [
+          "eas-cli",
+          "react-native-elements",
+          "react-native-safe-area"
+        ],
+        "listUnknownPackages": false
+      }
+    }
+  }
 }
