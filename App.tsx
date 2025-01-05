@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './components/HomeScreen';
 import CarteirinhaScreen from './components/CarteirinhaScreen';
+import { Icon } from 'react-native-elements';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,13 +22,19 @@ export default function App() {
           component={HomeScreen}
           options={{
             tabBarLabel: 'Início',
+            tabBarIcon: ({ color, size }) => (
+              <Icon name="home" color={color} size={size} />
+            ),
           }}
         />
         <Tab.Screen
           name="Carteirinha"
           component={CarteirinhaScreen}
           options={{
-            tabBarLabel: 'Carteirinha',
+            tabBarLabel: 'Sair',
+            tabBarIcon: ({ color, size }) => (
+              <Icon name="logout" color={color} size={size} />
+            ),
           }}
         />
       </Tab.Navigator>

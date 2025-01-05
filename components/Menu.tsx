@@ -12,13 +12,25 @@ const Menu = ({ navigation }: MenuProps) => {
         style={styles.menuButton}
         onPress={() => navigation.navigate('Início')}
       >
-        <Text style={styles.menuText}>Início</Text>
+        <Text style={styles.menuText}>Carteirinha Física</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.menuButton}
         onPress={() => navigation.navigate('Carteirinha')}
       >
-        <Text style={styles.menuText}>Carteirinha</Text>
+        <Text style={styles.menuText}>Cadastro</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.menuButton}
+        onPress={() => navigation.navigate('Carteirinha')}
+      >
+        <Text style={styles.menuText}>Minha Foto</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.menuButton}
+        onPress={() => navigation.navigate('Carteirinha')}
+      >
+        <Text style={styles.menuText}>Notificações</Text>
       </TouchableOpacity>
     </View>
   );
@@ -27,17 +39,25 @@ const Menu = ({ navigation }: MenuProps) => {
 export default Menu;
 
 const styles = StyleSheet.create({
-  menu: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    paddingVertical: 10,
-    backgroundColor: '#6200ee',
-  },
-  menuButton: {
-    padding: 10,
-  },
-  menuText: {
-    color: '#fff',
-    fontWeight: 'bold',
-  },
+    menu: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+    },
+    menuButton: {
+        width: '45%',
+        height: 50,
+        padding: 15,
+        marginBottom: 10,
+        borderRadius: 8,
+        marginHorizontal: 1,
+        backgroundColor: '#6200ee',
+    },
+    menuText: {
+        color: '#fff',
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
 });

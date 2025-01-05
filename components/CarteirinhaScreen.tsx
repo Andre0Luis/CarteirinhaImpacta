@@ -10,17 +10,17 @@ const CarteirinhaScreen = ({ navigation }: any) => {
         <View style={styles.card}>
           <Image
             source={require('../assets/Bruna_1.png')}
-            style={styles.image}
+            
+            style={[styles.image, { width: 450, height: 350, transform: [{ rotate: '-90deg' }] }]}
           />
         </View>
         <View style={styles.card}>
           <Image
             source={require('../assets/Bruna_2.png')}
-            style={styles.image}
+            style={[styles.image, { width: 500, height: 400}]}
           />
         </View>
       </Swiper>
-      <Menu navigation={navigation} />
     </View>
   );
 };
